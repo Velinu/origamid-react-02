@@ -2,6 +2,14 @@ import { useState } from 'react'
 import React from 'react'
 
 function App() {
+  const persona = [
+    {nome: "baki",
+     idade: 19},
+    {nome: "cell",
+     idade: 30},
+    {nome: "pedro",
+     idade: 35},
+  ]
   const luana = {
     cliente: 'Luana',
     idade: 27,
@@ -37,6 +45,13 @@ function App() {
       </p>
       <p>Total: {total}</p>
       {total > 10000 && <p>Esta gastando demais</p>} 
+
+      <ul>{persona.filter(({idade}) => idade >= 30)
+      .map(({nome, idade}) => 
+        <li key={nome}>
+          {nome} {idade}
+        </li>)}
+      </ul>
     </>
   )
 }
