@@ -36,7 +36,7 @@ function App() {
         <span style={{color: dados.ativa ? 'green': 'red'}}>{dados.ativa ? 'Ativo': 'Inativo'}</span>
       </p>
       <p>Total: {total}</p>
-      {total > 10000 && <p>Esta gastando demais</p>}
+      {total > 10000 && <p>Esta gastando demais</p>} 
     </>
   )
 }
