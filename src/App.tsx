@@ -37,7 +37,7 @@ function App() {
     Number(item.preco.replace("R$ ", ""))).reduce((a,b) => a+b)
   return (
     <>
-      <p>Nome: {dados.cliente}</p>
+    {/*   <p>Nome: {dados.cliente}</p>
       <p>Idade: {dados.idade}</p>
       <p>
         Situação: 
@@ -51,7 +51,9 @@ function App() {
         <li key={nome}>
           {nome} {idade}
         </li>)}
-      </ul>
+      </ul> */}
+
+      
     </>
   )
 }
