@@ -25,8 +25,8 @@ const produtos = [
     let dados = produtos.filter(({preco}) => Number(preco.replace("R$ ","")) > 1500)
     return(
         <>
-        {dados.map(({nome, preco, cores}) =>
-        <div>
+        {dados.map(({id,nome, preco, cores}) =>
+        <div key={id}>
             <h1>
                 {nome}
             </h1>
@@ -35,7 +35,7 @@ const produtos = [
             </p>
             <ul>
                 {cores.map((cor) =>
-                <li style={{backgroundColor: cor}}>
+                <li key={cor} style={{backgroundColor: cor}}> 
                     {cor}
                 </li>
                 )}
